@@ -14,8 +14,8 @@ echo date
 #echo "      Player-Liste:"
 #echo "$liste"
 echo -e "-----Hello Server-----"
-OUTPUT=$(sshpass -p 'onlyForTest' ssh ssh-w019db06@w019db06.kasserver.com 'ls')
-echo $OUTPUT
+#OUTPUT=$(sshpass -p 'onlyForTest' ssh ssh-w019db06@w019db06.kasserver.com 'ls')
+#echo $OUTPUT
 #ssh ssh-w019db06@w019db06.kasserver.com << EOF
 #expect "password:"
 #send "onlyForTest\r"
