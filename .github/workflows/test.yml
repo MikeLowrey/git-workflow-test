@@ -35,13 +35,13 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
           echo third line
-        - name: executing remote ssh commands using password
-          uses: appleboy/ssh-action@master
-          with:
-            host: 'w019db06.kasserver.com'
-            username: 'ssh-w019db06'
-            password: 'onlyForTest'
-            port: '22'
-            script: whoami
+      - name: executing remote ssh commands using password
+        uses: appleboy/ssh-action@master
+        with:
+          host: 'w019db06.kasserver.com'
+          username: 'ssh-w019db06'
+          password: 'onlyForTest'
+          port: '22'
+          script: whoami
       - name: Run custome deployment script
         run: ./deploymentscript.sh 
