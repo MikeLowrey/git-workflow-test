@@ -47,7 +47,9 @@ jobs:
           script: | 
             cd www/htdocs/w019db06/
             pwd            
-            mkdir testfolder            
-            echo Hello2 > test.txt            
+            cd application/git-workflow-test
+            git status 
+            git pull           
+            
       - name: Run custome deployment script
         run: ./deploymentscript.sh 
