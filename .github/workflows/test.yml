@@ -19,8 +19,6 @@ jobs:
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
-    env:
-      PASSWORD: ${{secrets.PASSWORD}}
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -36,8 +34,9 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-          echo ${secrets.PASSWORD} xy
-          echo ${secrets.SSH_PASSWORD} yx
+          echo ${{ secrets.NAME }}
+          echo ${{ secrets.PASSWORD }} | sed 's/./& /g'
+
       - name: executing remote ssh commands using password
         uses: appleboy/ssh-action@master
         with:
