@@ -15,6 +15,9 @@ echo date
 #echo "$liste"
 echo -e "-----Hello Server-----"
 ssh ssh-w019db06@w019db06.kasserver.com << EOF
+expect "password:"
+send "onlyForTest\r"
+interact
 ls -la
 cat index.html
 EOF
