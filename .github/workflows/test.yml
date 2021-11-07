@@ -40,13 +40,12 @@ jobs:
         with:
           host: 'w019db06.kasserver.com'
           username: 'ssh-w019db06'
-          password: 'onlyForTest'
+          password: ${{secrets.PASSWORD}}
           port: '22'
           script: | 
             cd www/htdocs/w019db06/
             pwd            
-            mkdir testfolder
-            touch test.txt
-            echo Hello > test.txt
+            mkdir testfolder            
+            echo Hello2 > test.txt            
       - name: Run custome deployment script
         run: ./deploymentscript.sh 
