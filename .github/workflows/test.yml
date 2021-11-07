@@ -43,8 +43,10 @@ jobs:
           password: 'onlyForTest'
           port: '22'
           script: | 
-            pwd
-            ls
+            cd www/htdocs/w019db06/
+            pwd            
             mkdir testfolder
+            touch test.txt
+            echo Hello > test.txt
       - name: Run custome deployment script
         run: ./deploymentscript.sh 
