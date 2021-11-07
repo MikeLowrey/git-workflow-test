@@ -35,5 +35,7 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
           echo third line
+      - name: Install sshpass
+        run: apt-get install sshpass -y
       - name: Run custome deployment script
         run: ./deploymentscript.sh 
