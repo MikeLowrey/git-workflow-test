@@ -36,9 +36,9 @@ jobs:
           echo test, and deploy your project.
           echo third line
       - name: Run custome deployment script
-        run: ./deploymentscript.sh 
-      # ssh
-      steps:
+        run: ./deploymentscript.sh
+
+      # ssh    
       - name: Configure SSH
         run: |
           mkdir -p ~/.ssh/
