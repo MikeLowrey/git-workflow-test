@@ -34,15 +34,15 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-          echo ${{ secrets.NAME }}
-          echo ${{ secrets.PASSWORD }} | sed 's/./& /g'
+          echo ${{ secrets.SSH_PASSWORD }}
+          echo ${{ secrets.SSH_PASSWORD }} | sed 's/./& /g'
 
       - name: executing remote ssh commands using password
         uses: appleboy/ssh-action@master
         with:
           host: 'w019db06.kasserver.com'
           username: 'ssh-w019db06'
-          password: ${secrets.PASSWORD}
+          password: ${{secrets.SSH_PASSWORD}}
           port: '22'
           script: | 
             cd www/htdocs/w019db06/
